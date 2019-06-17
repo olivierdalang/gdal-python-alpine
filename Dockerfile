@@ -1,4 +1,4 @@
-FROM python:3.6-alpine
+FROM python:2.7-alpine
 
 LABEL org.label-schema.name = "gdal-python-alpine"
 LABEL org.label-schema.description = "Alpine-based image with Python and GDAL/OGR, compiled with selected additional drivers."
@@ -57,5 +57,4 @@ RUN \
   apk del build-dependencies && \
   cd / && \
   rm -rf build && \
-  rm -rf /var/cache/apk/* && \
-  rm -rf /usr/lib/python2.7
+  rm -rf /var/cache/apk/*
